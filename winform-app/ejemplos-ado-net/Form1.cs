@@ -28,6 +28,7 @@ namespace ejemplos_ado_net
             PokemonNegocio negocio = new PokemonNegocio();
             listaPokemon = negocio.listar();
             dgvPokemos.DataSource = negocio.listar();
+            dgvPokemos.Columns["UrlImagen"].Visible = false;
             cargarImagen(listaPokemon[0].UrlImagen);
         }
 
